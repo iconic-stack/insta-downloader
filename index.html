@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaSaver - Instagram Reel, Story, DP Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .ui-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .clean-input {
+            border: 2px solid #ddd;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transform: translateZ(20px);
+        }
+        .clean-input:focus {
+            box-shadow: 0 0 0 2px #4c51bf, 0 0 10px rgba(76, 81, 191, 0.5);
+            outline: none;
+        }
+        .clean-button {
+            background-image: linear-gradient(45deg, #4c51bf, #5a67d8);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 81, 191, 0.4);
+            transform: translateZ(20px);
+            color: white;
+            font-weight: 600;
+        }
+        .clean-button:hover {
+            box-shadow: 0 4px 20px rgba(76, 81, 191, 0.6);
+            transform: translateY(-2px) translateZ(25px);
+        }
+        .nav-button {
+            background-color: transparent;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background-image: linear-gradient(45deg, #bc1888, #dc2743);
+            box-shadow: 0 4px 15px rgba(188, 24, 136, 0.4);
+        }
+        .nav-button.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            background-image: linear-gradient(45deg, #f09433, #dc2743);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <main class="w-full max-w-3xl mx-auto">
+        <div class="ui-container rounded-3xl shadow-2xl p-6 md:p-12 text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight" style="background-image: linear-gradient(45deg, #f09433, #dc2743, #cc2366); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    InstaSaver
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-md mx-auto">
+                    Reel, Story, और DP आसानी से डाउनलोड करें।
+                </p>
+            </div>
+            
+            <div class="flex justify-center items-center gap-4 mb-8 relative z-10">
+                <button id="reelBtn" class="nav-button active">Reel Downloader</button>
+                <button id="storyBtn" class="nav-button">Story Downloader</button>
+                <button id="dpBtn" …
